@@ -1,0 +1,25 @@
+name: Retrain Gate
+
+on:
+  pull_request:
+    paths:
+      - "data/train/**"
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt scikit-learn datasets
+
+      - name: Run eval
+        run: |
+          python scripts/evaluate.py --threshold 0.80
+        # exits with code 1 if accuracy < 0.80, blocking the PR merge
