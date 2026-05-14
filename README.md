@@ -9,10 +9,9 @@ pinned: false
 
 # Case 9: Model Serving Lite — Sentiment API
 
-**Live demo:** https://huggingface.co/spaces/YOUR_USERNAME/case9-sentiment
-**Repo:** https://github.com/YOUR_USERNAME/case9-model-serving
-**Demo video:** https://loom.com/share/XXXXX
-
+**Live demo:** https://eshtiw-case9-sentiment.hf.space/docs
+**Repo:** https://github.com/Eshan-BlipTweak/case9-model-serving
+**Demo video:** https://loom.com/share/XXXXX  
 ## What this is
 A production-style sentiment classification API built on DistilBERT,
 serving predictions with structured logging, drift monitoring, and a
