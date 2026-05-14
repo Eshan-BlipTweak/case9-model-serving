@@ -1,13 +1,15 @@
-# Stage 1: builder — install deps
 FROM python:3.11-slim AS builder
 WORKDIR /build
-COPY requirements.txt .
-RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-# Stage 2: runtime — lean final image
+RUN pip install torch==2.3.0+cpu --index-url https://download.pytorch.org/whl/cpu
+RUN pip install "numpy>=1.24,<2.0"
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 FROM python:3.11-slim AS runtime
 WORKDIR /app
-COPY --from=builder /install /usr/local
+COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
 COPY app/ ./app/
 
 ENV PORT=7860
