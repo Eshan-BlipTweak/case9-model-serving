@@ -1,3 +1,12 @@
+---
+title: Case9 Sentiment
+emoji: 🎯
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # Case 9: Model Serving Lite — Sentiment API
 
 **Live demo:** https://huggingface.co/spaces/YOUR_USERNAME/case9-sentiment
