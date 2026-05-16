@@ -12,6 +12,10 @@ pinned: false
 **Live demo:** https://eshtiw-case9-sentiment.hf.space/docs
 **Repo:** https://github.com/Eshan-BlipTweak/case9-model-serving
 **Demo video:** https://www.youtube.com/watch?v=N-9xtRrcg6o
+
+## Screenshot
+![App screenshot](screenshot.png)
+
 ## What this is
 A production-style sentiment classification API built on DistilBERT,
 serving predictions with structured logging, drift monitoring, and a
@@ -48,3 +52,6 @@ curl -X POST http://localhost:8000/predict \
 - Model versioning with MLflow
 - Rate limiting middleware
 - Async batching for throughput
+
+## License
+MIT
