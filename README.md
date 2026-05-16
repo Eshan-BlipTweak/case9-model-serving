@@ -22,7 +22,7 @@ serving predictions with structured logging, drift monitoring, and a
 CI pipeline that gates model promotion on metric regression.
 
 ## How to run locally
-1. `git clone https://github.com/YOUR_USERNAME/case9-model-serving`
+1. `git clone https://github.com/Eshan-BlipTweak/case9-model-serving`
 2. `pip install -r requirements.txt`
 3. `uvicorn app.main:app --reload`
 4. Open http://localhost:8000/docs
